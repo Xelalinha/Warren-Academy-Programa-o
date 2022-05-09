@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int i,x,valor[5], horaNormal=0, horaAtrasado=0;
+    printf("Digite a quantidade minima de alunos que devem estar na sala\n");
+    scanf("%i", &x);
+   
+    for(i=0; i<5; i++){
+        printf("Qual o tempo de chegada dos alunos em sequencia: \n ");
+        scanf("%d", &valor[i]);
+        if(valor[i] <= 0){
+            horaNormal++;
+        }
+        else{
+            horaAtrasado++;
+        }
+    }
+    
+    if(horaNormal >= x){
+        printf("Aula Normal");
+    }else{
+        printf("Aula Cancelada");
+    }
+    return 0;
+}
